@@ -11,6 +11,11 @@ import { getToken } from '../utils/auth'
 import { Toast } from 'vant'
 import store from '../store'
 
+
+// 引入文章详情页面
+import ArticleDetail from '../views/manager/ArticleDetail'
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -46,6 +51,9 @@ const routes = [
       },{
         path: 'user',
         component: User,
+      },{
+        path: 'article_detail',
+        component: ArticleDetail,
       }]
   },
   {
