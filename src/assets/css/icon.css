@@ -1,0 +1,28 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1722494_mijwc3adsm.eot?t=1585533170032'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1722494_mijwc3adsm.eot?t=1585533170032#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPMAAsAAAAACAgAAAN/AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDPIMYATYCJAMQCwoABCAFhG0HTxsRBxFVnFfIfiQYN44nl+d5GVVCE+mb4PlX93qfJDuOHEBoOzGRMxUYzo40EcH8t5/uGdshXITqkpynnuU7ktd05V2asjxOoxRCfiF/AwQQzP2fy+ndVeLzW5bLmsPqedQLMBpbAxp7UaIljC2HY6/Co2szBLBkUQlp2rxtVzwMpJcAMnbUiEF4KTWmJlHwENySiQZZhYOnFqtrTFjp/16+kogHCkdDBnYc3mwoDT+Ufping1Cgr4vAGc8IiNNAA5UAAzKy1DwYHYYrobF6c0N1wMNDwVg1HT/MC4WAuxexR//yQCFoEBcSHwFAVYho+FBq06DgQ0caBD7Mk3CTONPdAyywFDgFhIzGgsaNiotIiHLjI8jhUwbuOym64lThoMNBiUzYsMEuOUSwPlHk+v1u/oMHg1mg+4OHPe4njPfu9eAZrqArFrbDCv9hCdNefk7EvtMpZvOZwuiD59Kd7t3skg3SL1hno/zVnYqNvkSy+XChP9BfurFig7VL1gXrh0VwxsTIjTnRYF7tR1Z87mP3und25mYfzc7dWfduUKUCQu+bLnSiiQ6f0wS2Ng9M29pOnw7rqu/uqWbMkB6q34xZ/aSnxAyHiT9w4paavnXnbDVRbd+qZ9O27fwPs/I3XXEX1Q5bfvH0irD4aWrzZkqH2O23RkQsihx+K8oflnRk7IAB3ZxuZn4l/4cfZaOLxsm86e73gVMvVT0Tfi3uWrg7rr1qbk/Fn1rVPLgaf7X9ukJxc2xhIqSpFrUcQuf1Ft3Qj/7X7bX9n5040qLL2wHRdf97/gVlPTk46Te4QucN7Tk/haNz/h6nZYoxeERjjMa32abH0Ibf008BFguEkD2OF2NIE1vHg+CRGIMijEzQeBSghlAJHHyqgoun0ACscul0Xzw1JwsHynwQiBhfUKKcAy3GDzWEP3Ak+QdXTHOwuhe/oK8o3jVRzAxLyF/AhfTEdLYLEk/oxjbTJM8n3lAH9kEcRNlYij3qGEOGu0vMCEilgyPaDttWwKvUWFhQmflDGFLZm4JCuslOEwplDCqB3AtgBdEjN7PZ5b5/gpxRK6M1SXX6G6QGXD+IBaIWaCruWyVdyzWDOydhDAFEiQ44IiNqaVgAX96uhgomUPUIegchpKO24mB+afeEiwCLPMqkRIsRB/cVe+73D+ScMzFOaHxXHCebB/ZBKOvdZAIA') format('woff2'),
+  url('//at.alicdn.com/t/font_1722494_mijwc3adsm.woff?t=1585533170032') format('woff'),
+  url('//at.alicdn.com/t/font_1722494_mijwc3adsm.ttf?t=1585533170032') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1722494_mijwc3adsm.svg?t=1585533170032#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shipin:before {
+  content: "\e650";
+}
+
+.icon-weibiaoti2fuzhi12:before {
+  content: "\e629";
+}
+
+.icon-wenzhang:before {
+  content: "\e67d";
+}
