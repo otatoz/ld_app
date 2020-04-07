@@ -5,10 +5,12 @@ Vue.use(Vuex)
 
 import user from './modules/user'
 import home from './modules/home'
+import article from './modules/article'
 
 export default new Vuex.Store({
   modules:{
     user,
-    home
+    home,
+    article
   }
 })
