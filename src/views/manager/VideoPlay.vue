@@ -37,7 +37,8 @@ export default {
             }
             this.findVideoDetail(obj)
         }
-    }
+    },
+    
 }
 </script>
 

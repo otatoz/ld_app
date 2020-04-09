@@ -9,13 +9,16 @@
       <div class="video_name">{{item.vr_name}}</div>
       <div class="video_username_time">
         <div class="video_username">{{item.vr_user}}</div>
-        <div class="video_publishTime">{{item.vr_created_time}}</div>
+        <!-- |管道符 -->
+        <div class="video_publishTime">{{item.vr_created_time | forDate}}</div>
       </div>
     </div>
   </div>
 </template>
 <script>
 import {mapActions,mapState,mapGetters,mapMutations} from 'vuex';
+// 1.导入moment插件
+import moment from 'moment';
 export default {
   computed:{
     ...mapState('video',['videos']),
@@ -33,6 +36,13 @@ export default {
         query:{id}
       })
     }
+  },
+  // 过滤器
+  filters:{
+      forDate(str){
+        // 2.使用moment插件
+        return moment(str).format('YYYY/MM/DD hh:mm:ss')
+      }
   }
 }
 </script>
