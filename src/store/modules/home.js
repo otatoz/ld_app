@@ -37,10 +37,10 @@ export default {
 		async findAllCategory(context){
 			let res = await get('/manager/category/findAllCategory')
 			// commit提交突变
-			context.commit('refreshCategory',res.data)
+			context.commit('refreshCategory',res.data.data)
 			// dispatch分发请求
 			// console.log(res.data[0].id,'---')
-			context.dispatch('findChildCategory',res.data[0].id)
+			context.dispatch('findChildCategory',res.data.data[0].id)
 		},
 		// 根据父栏目查询子栏目
 		async findChildCategory(context,params){
@@ -53,8 +53,8 @@ export default {
 			// console.log(id,'--')
 			let res = await get('/manager/category/findCategoryByParentId',id)
 			// console.log(res.data)
-			context.commit('refreshChildCategory',res.data)
-			context.dispatch('findArticle',res.data[0].id)
+			context.commit('refreshChildCategory',res.data.data)
+			context.dispatch('findArticle',res.data.data[0].id)
 		},
 		// 根据二级栏目查询文章
 		async findArticle(context,params){
@@ -66,11 +66,11 @@ export default {
 			// console.log(id,'--')
 			let res = await get('/manager/article/findArticle',id)
 			// console.log(res.data)
-			context.commit('refreshArticle',res.data)
+			context.commit('refreshArticle',res.data.data)
 		},
 		async findArticleDetail(context,params){
 			let res = await get('/manager/article/findArticleById',id)
-			context.commit('refreshDetail',res.data)
+			context.commit('refreshDetail',res.data.data)
 		}
 	}
 }

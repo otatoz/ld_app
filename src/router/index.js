@@ -15,6 +15,8 @@ import store from '../store'
 // 引入文章详情页面
 import ArticleDetail from '../views/manager/ArticleDetail'
 
+// 引入视频播放页面
+import VideoPlay from '../views/manager/VideoPlay'
 
 Vue.use(VueRouter)
 
@@ -54,6 +56,9 @@ const routes = [
       },{
         path: 'article_detail',
         component: ArticleDetail,
+      },{
+        path:'video_play',
+        component: VideoPlay
       }]
   },
   {

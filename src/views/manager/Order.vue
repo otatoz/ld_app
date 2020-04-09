@@ -1,12 +1,15 @@
 <template>
   <div class="video">
-    <div class="video_item">
-      <div class="video_img"><img src="@/assets/home.jpg" alt=""></div>
-      <div class="video_tag">No.1</div>
-      <div class="video_name">视频名</div>
+    <div class="video_item" v-for="(item,index) in videos" :key="item.id" @click="toPlay(item.id)">
+      <div class="video_img"><img :src="item.vr_img" alt=""></div>
+      <div class="video_tag" v-if="index == 0" style="background-color:teal">No.1</div>
+      <div class="video_tag" v-else-if="index == 1" style="background-color:lightblue">No.2</div>
+      <div class="video_tag" v-else-if="index == 2" style="background-color:yellow">No.3</div>
+      <div class="video_tag" v-else style="background-color:black">No.{{index + 1}}</div>
+      <div class="video_name">{{item.vr_name}}</div>
       <div class="video_username_time">
-        <div class="video_username">视频发布者</div>
-        <div class="video_publishTime">视频发布时间</div>
+        <div class="video_username">{{item.vr_user}}</div>
+        <div class="video_publishTime">{{item.vr_created_time}}</div>
       </div>
     </div>
   </div>
@@ -15,14 +18,21 @@
 import {mapActions,mapState,mapGetters,mapMutations} from 'vuex';
 export default {
   computed:{
-    ...mapState('home',['']),
+    ...mapState('video',['videos']),
   },
   created(){
-
+    this.findVideos()
   },
   methods:{
-    ...mapActions('home',['']),
-    
+    ...mapActions('video',['findVideos']),
+    // 跳转到视频播放页面
+    toPlay(id){
+      this.$router.push({
+        path:'/manager/video_play',
+        // es6中对象的简写
+        query:{id}
+      })
+    }
   }
 }
 </script>

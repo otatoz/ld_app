@@ -22,8 +22,8 @@ export default {
                 id:params
             }
             let res = await get('/manager/article/findArticleById',id)
-            context.commit('refreshArticle',res.data)
-            context.commit('refreshComment',res.data.comments)
+            context.commit('refreshArticle',res.data.data)
+            context.commit('refreshComment',res.data.data.comments)
         },
         async commentHandler(context,params){
             let res = await post('/manager/comment/saveOrUpdateComment',params)

@@ -11,17 +11,17 @@ axios.defaults.baseURL = 'http://47.106.244.1:8099';
 axios.interceptors.response.use(function (response) {
   // 将后台的参数结果设置到response
   let {data} = response;
-  response.data = data.data;
+  response.data = data;
   response.status = data.status;
   response.statusText = data.message;
   // 统一异常处理
-  if(data.status !== 200){
-    Toast(data.message);
-    if(data.message === "token失效，请重新登录"){
-      router.push("/login")
-    }
-    return Promise.reject(data.message);
-  }
+  // if(data.status !== 200){
+  //   Toast(data.message);
+  //   if(data.message === "token失效，请重新登录"){
+  //     router.push("/login")
+  //   }
+  //   return Promise.reject(data.message);
+  // }
   return response;
 }, function (error) {
   Toast("网络异常")
